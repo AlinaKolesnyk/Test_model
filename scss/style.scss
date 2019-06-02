@@ -1,0 +1,324 @@
+@import 'reset';
+@import 'normalize';
+
+@import 'bootstrap-overrides';
+@import '../bootstrap/scss/bootstrap.scss';
+@import 'typography';
+
+$mainFont: SofiaProR;
+$navFont: SofiaProM;
+$headingFont: SofiaProSB;
+$commentsHeading: SofiaProB;
+$commentsFont: OSans;
+$commentsHeadFont: OSansSB;
+$colorFooter: #1d1e25;
+$lightColorFont: #fff;
+$darkColorFont: #111518;
+$blockHeadingColor: #101417;
+$copirightingColor: #4a4d5e;
+$backgroundBlock: #f7f7f7;
+$buttonColor: #60e3a1;
+$lineColor: #f9d10d;
+$commentsColor: #888888;
+
+body {
+	    font-family: $mainFont, sans-serif;
+	    font-size: 16px;
+	    color: $darkColorFont;
+}
+
+/*--HEADER--*/
+.logo {
+	     padding-top: 40px;
+}
+.nav-item {
+	 a {
+		font-family: $navFont, sans-serif;
+		font-size: 14px;
+		color: $darkColorFont;
+		padding-top:27px;
+		margin-right: 16px;
+		text-transform: uppercase;
+	  }
+	a:hover {
+	    border-top: 2px solid $lineColor;
+}
+	}
+@media (min-width: 576px) and (max-width: 992px){
+     .nav-item a:hover {
+		border-top: none;
+	    border-bottom: 2px solid $lineColor;
+}
+}
+
+.navbar-light .navbar-nav .nav-link {
+	    color: $darkColorFont;
+}
+ ul {
+		letter-spacing: 1px;
+		text-align: left;
+	}
+
+/*--HEADER--*/
+h1 {
+	    font-family: $headingFont, sans-serif;
+	    font-size: 5.1vw;
+	    color: $darkColorFont;
+	    line-height: 5.3vw;
+	    letter-spassing: 8px;
+	    margin-top: 46px;
+	    margin-bottom: 82px;
+	    margin-left: 5.0%;
+}
+.bgimg {
+		height: 472px;
+		background: url(../images/background.png) no-repeat;
+		background-position: 0 -300px;
+	    background-size: cover;
+		-webkit-background-size: cover;
+		-o-background-size: cover;
+		-moz-background-size: cover;
+		 }
+/*--FIRST-BLOCK--*/
+.first-block {
+	    min-height: 534px;
+	    width: 100%;
+	    background-color: $backgroundBlock;
+	    color: $darkColorFont;
+	.block {
+		padding-top: 112px;
+		padding-left: 56px;
+
+		.art-1 {
+		padding-right: 24px;
+		}
+		.art-2 {
+		padding-left: 24px;
+		padding-right: 50px;
+		}
+		.art-3 {
+		padding-left: 34px;
+		margin-top:-3px;
+		padding-right: 20px;
+			p {
+			  margin-bottom: 12px;
+			}
+		}
+		.art-1, .art-2, .art-3 {
+		box-sizing: border-box;
+		}
+		h3 {
+		font-family: $commentsHeading, sans-serif;
+		font-size: 36px;
+		color: $darkColorFont;
+		padding-bottom: 20px;
+		padding-top: 16px;
+		}
+	}
+	.cards {
+		box-sizing: border-box;
+		margin-bottom: 102px;
+		padding-right: 70px;
+	}
+	p {
+		font-family: $mainFont, sans-serif;
+		font-size: 16px;
+		list-style-type: disc;
+		padding-bottom: 0;
+		line-height: 20px;
+	}
+}
+/*--FIRST-BLOCK--*/
+
+/*--COMMENT-BLOCK--*/
+.comment-form {
+	    min-height: 572px;
+	    background-color: $colorFooter;
+	    color: $lightColorFont;
+	.form-heading {
+		min-height: 200px;
+}
+
+	h2 {
+		font-family: $commentsHeading, sans-serif;
+	    font-size: 55px;
+		line-height: 50px;
+		padding-right: 30px;
+
+	}
+	h2::after {
+		content: "";
+		width: 72px;
+		height: 4px;
+		background-color: $lineColor;
+		position:absolute;
+		top: 138px;
+	}
+	@media (max-width: 992px) {
+		h2::after {
+		content: "";
+		width: 72px;
+		height: 4px;
+		background-color: $lineColor;
+		position:absolute;
+		top: 90px;
+		left: 30px;
+	}
+}
+	.row {
+		padding-top: 132px;
+		font-family: $mainFont;
+		margin-left: 40px;
+
+		form {
+		padding-top: 8px;
+}
+		#message_id {
+	    height: 56px;
+		}
+		#comments {
+		height: 148px;
+		}
+	    #message_id, #comments {
+		background-color: $colorFooter;
+		width: 43.4vw;
+		border: 1px solid $buttonColor;
+		color: $buttonColor;
+		outline: none;
+		padding: 18px;
+		font-size: 16px;
+		}
+	    input::-moz-placeholder {
+		    color: $buttonColor;
+		}
+		input::-webkit-input-placeholder {
+			color: $buttonColor;
+		}
+		textarea::-moz-placeholder {
+		    color: $buttonColor;
+		}
+		textarea::-webkit-input-placeholder {
+			color: $buttonColor;
+		}
+		button {
+			width: 150px;
+			height: 55px;
+			background-color: $buttonColor;
+			color: $darkColorFont;
+			padding-bottom: 10px;
+		}
+	}
+}
+/*--COMMENT-BLOCK--*/
+
+/*--FOOTER--*/
+.footer {
+	    font-family: $mainFont;
+      font-size: 16px;
+		  min-height: 104px;
+		  background-color: $colorFooter;
+	    color: $lightColorFont;
+	    border-top: 1px solid $copirightingColor;
+
+ p.tel {
+		margin-top: -8px;
+		 }
+ .copiright {
+		font-size: 13px;
+		color: $copirightingColor;
+	  }
+	  }
+/*--FOOTER--*/
+/*--------SECOND PAGE---------*/
+h1.second-page-header {
+	    font-size: 5.1vw;
+	    margin-top: 41px;
+}
+.flexbox {
+	    display:flex;
+	    flex-direction:row;
+	    flex-wrap:wrap;
+	    justify-content: center;
+}
+.comment-block {
+	     background-color: $lightColorFont;
+	     max-width: 484px;
+	     margin-left:40px;
+.content {
+
+	    font-family: $commentsFont, sans-serif;
+	    box-shadow: 6px 6px 24px #f3f3f3;
+	    padding-top: 30px;
+		padding-left: 34px;
+	    padding-right: 30px;
+	    color: $commentsColor;
+	h4.block-heading {
+		font-family: $commentsHeadFont, sans-serif;
+		font-size:20px;
+		line-height: 28px;
+		color: $blockHeadingColor;
+
+	}
+	.block-content {
+		font-family: $commentsFont, sans-serif;
+		font-size: 14px;
+		line-height: 24px;
+
+	}
+	.block-btn {
+		padding: 14px 32px;
+		background-color: $buttonColor;
+		margin-bottom: 42px;
+		border-radius: 0.20rem;
+		font-family: $mainFont, sans-serif;
+	}
+}
+}
+
+/*--------SECOND PAGE---------*/
+
+/*--------THIRD PAGE---------*/
+  .fa-arrow-left {
+	    color: $buttonColor;
+}
+  a.active {
+
+	     border-top: 2px solid $lineColor;
+}
+	p.back-link {
+	    font-family: $mainFont, sans-serif;
+		font-size: 16px;
+		color: $darkColorFont;
+		text-decoration: underline;
+	}
+.article {
+	    border-bottom: 1px solid #a6a6a7;
+
+	h1.third-page-header {
+		font-size: 3.5vw;
+		line-height: 4.3vw;
+		margin-bottom: 42px;
+		margin-top: 40px;
+	}
+	.ph {
+		line-height: 1.8rem;
+	}
+}
+.undertext {
+	    font-family: $headingFont, sans-serif;
+	    font-size: 24px;
+	    color: #a6a6a7;
+}
+.tohomepage {
+	    border: 1px solid $buttonColor;
+	    padding: 16px;
+	    border-radius: .20rem;
+	    margin-bottom: 78px;
+	    transition: 0.5s;
+
+}
+.tohomepage:hover {
+	    box-shadow: 2px 2px 4px $buttonColor;
+	    border: 1px dashed $buttonColor;
+}
+/*--------THIRD PAGE---------*/
